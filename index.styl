@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "_segoe";
+    src: local("Segoe UI");
+}
+
+@font-face {
+    font-family: "_segoe";
+    src: local("Segoe UI Semilight"),local("Segoe UI Light");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "_segoe";
+    src: local("Segoe UI Semibold");
+    font-weight: 600;
+}
+
+body, input, button, select {
+    font: 100%/1.5 "_segoe","Segoe UI",sans-serif;
+    color: #333;
+    font-feature-settings: "dlig","tnum";
+}
+
+html {
+    font-size: 125%;
+}
+
+body {
+    background: #eee;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: .05em solid #48c;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+.top-shadow {
+    height: 8.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 .4em rgba(0,0,0,.05), 0 .3em 1em rgba(0,0,0,.08);
+    z-index: 1;
+}
+
+.win-title {
+    padding: .3em 0 .3em 6em;
+    text-align: center;
+    position: absolute;
+    font-size: 70%;
+    font-weight: 400;
+    margin: 0 6em 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.minimize-btn, .close-btn {
+    border: 0;
+    background: #fff;
+    width: 2.1em;
+    height: 1.5em;
+    float: right;
+    padding: 0;
+    transition: .4s;
+    line-height: 1.1;
+}
+
+.close-btn:hover, .close-btn:focus, .close-btn:active {
+    background: #e23;
+    color: #fff;
+}
+
+.close-btn:before {
+    content: "\00d7";
+    font-size: 110%;
+    line-height: 1;
+}
+
+.minimize-btn:hover, .minimize-btn:focus, .minimize-btn:active {
+    background: #eee;
+}
+
+.minimize-btn:before {
+    content: "\2212";
+    font-size: 110%;
+    line-height: 1;
+}
+
+.calc-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 1.5em 0 0;
+}
+
+.calc-expr {
+    text-align: right;
+    margin: 2em 1.2em 0;
+    display: block;
+    font-weight: 600;
+}
+
+.calc-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 0;
+    background: #fff;
+    text-align: right;
+    width: 100%;
+    padding: .4em .8em .6em;
+    font-size: 150%;
+    line-height: 1.2;
+    height: 2.2em;
+    font-weight: 300;
+}
+
+.calc-input::-ms-clear {
+    display: none;
+}
+
+.calc-btns {
+    position: absolute;
+    top: 8.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calc-key-btn {
+    border: 0;
+    background: transparent;
+    transition: .4s;
+    font-size: 135%;
+}
+
+.calc-key-btn:hover, .calc-key-btn:focus {
+    background-color: rgba(0,0,0,.1);
+}
+
+.backspace-btn {
+    font-size: 120%;
+}
+
+.backspace-btn:before {
+    font-family: "Segoe UI Symbol";
+    content: "\e083";
+}

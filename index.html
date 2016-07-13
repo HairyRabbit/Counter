@@ -1,0 +1,50 @@
+{% block content %}
+<main id="main">
+  <div class="top-shadow">
+    <button class="close-btn" id="closeBtn"></button>
+    <button class="minimize-btn" id="minimizeBtn"></button>
+    <h2 class="win-title" id="mockTitle">Mockup calculator</h2>
+    <label class="calc-label">
+      <span class="calc-expr" id="calcExpr"></span>
+      <input class="calc-input" value="0" id="calcInput" />
+    </label>
+  </div>
+  <div class="calc-btns">
+    <button class="calc-key-btn" style="-ms-grid-row:1;-ms-grid-column:1" tabindex="-1" data-input="+">+</button>
+    <button class="calc-key-btn" style="-ms-grid-row:1;-ms-grid-column:2" tabindex="-1" data-input="-">&minus;</button>
+    <button class="calc-key-btn" style="-ms-grid-row:1;-ms-grid-column:3" tabindex="-1" data-input="*">&times;</button>
+    <button class="calc-key-btn" style="-ms-grid-row:1;-ms-grid-column:4" tabindex="-1" data-input="/">&divide;</button>
+    <button class="calc-key-btn" style="-ms-grid-row:2;-ms-grid-column:1" tabindex="-1" data-input="7">7</button>
+    <button class="calc-key-btn" style="-ms-grid-row:2;-ms-grid-column:2" tabindex="-1" data-input="8">8</button>
+    <button class="calc-key-btn" style="-ms-grid-row:2;-ms-grid-column:3" tabindex="-1" data-input="9">9</button>
+    <button class="calc-key-btn" style="-ms-grid-row:2;-ms-grid-column:4" tabindex="-1" data-input="(">(</button>
+    <button class="calc-key-btn" style="-ms-grid-row:3;-ms-grid-column:1" tabindex="-1" data-input="4">4</button>
+    <button class="calc-key-btn" style="-ms-grid-row:3;-ms-grid-column:2" tabindex="-1" data-input="5">5</button>
+    <button class="calc-key-btn" style="-ms-grid-row:3;-ms-grid-column:3" tabindex="-1" data-input="6">6</button>
+    <button class="calc-key-btn" style="-ms-grid-row:3;-ms-grid-column:4" tabindex="-1" data-input=")">)</button>
+    <button class="calc-key-btn" style="-ms-grid-row:4;-ms-grid-column:1" tabindex="-1" data-input="1">1</button>
+    <button class="calc-key-btn" style="-ms-grid-row:4;-ms-grid-column:2" tabindex="-1" data-input="2">2</button>
+    <button class="calc-key-btn" style="-ms-grid-row:4;-ms-grid-column:3" tabindex="-1" data-input="3">3</button>
+    <button class="calc-key-btn backspace-btn" style="-ms-grid-row:4;-ms-grid-column:4" tabindex="-1" id="backsp"></button>
+    <button class="calc-key-btn" style="-ms-grid-row:5;-ms-grid-column:1" tabindex="-1" data-input="0">0</button>
+    <button class="calc-key-btn" style="-ms-grid-row:5;-ms-grid-column:2" tabindex="-1" data-input=".">.</button>
+    <button class="calc-key-btn" style="-ms-grid-row:5;-ms-grid-column:3" tabindex="-1" id="equal">=</button>
+    <button class="calc-key-btn" style="-ms-grid-row:5;-ms-grid-column:4" tabindex="-1" id="clear">C</button>
+  </div>
+</main>
+{% endblock %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="index.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor.dll.js"></script>
+<script src="tool.dll.js"></script>
+<script src="commons.js"></script>
+<script src="index.js"></script>
+{% endblock%}
+
+
+{% extends "tpls/page.html" %}
